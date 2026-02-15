@@ -1,5 +1,5 @@
 # ==========================================
-# 🚜 Simple Tractor Forecast App
+# Simple Tractor Forecast App
 # ==========================================
 
 import streamlit as st
@@ -24,7 +24,7 @@ st.write("Forecast Between 2014 – 2025")
 @st.cache_data
 def load_data():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(base_dir, "Tractor-Sales - Tractor-Sales.csv")
+    file_path = os.path.join(base_dir, "Tractor-Sales.csv")
 
     df = pd.read_csv(file_path)
     df['Month-Year'] = pd.to_datetime(df['Month-Year'], format='%b-%y')
